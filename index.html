@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geraldo Fit - Transformación 40+</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; margin:0; background:#0a0a0a; color:#fff; }
+        header { background: linear-gradient(90deg, #ff4081, #3f51b5); padding:1.5rem; text-align:center; border-radius:0 0 24px 24px; }
+        nav { display:flex; flex-wrap:wrap; justify-content:space-around; background:#16213e; padding:0.8rem; position:sticky; top:0; z-index:10; gap:5px; }
+        .tab { display:none; padding:1rem; }
+        .tab.active { display:block; }
+        button { background:linear-gradient(90deg,#ff4081,#ff80ab); color:white; border:none; padding:12px 20px; margin:6px; border-radius:12px; font-weight:600; cursor:pointer; }
+        .card { background:#16213e; margin:12px 0; padding:18px; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+        .exercise { background:#0f3460; padding:16px; border-radius:12px; margin:10px 0; }
+        h2, h3 { color:#ff80ab; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏋️‍♂️ Geraldo Fit</h1>
+        <p>40+ • Masa Muscular • Definición • Jeft Style</p>
+    </header>
+
+    <nav>
+        <button onclick="showTab(0)">🏠 Inicio</button>
+        <button onclick="showTab(1)">📅 Rutinas 3 Meses</button>
+        <button onclick="showTab(2)">🍲 Dieta VE</button>
+        <button onclick="showTab(3)">💊 Suplementos</button>
+        <button onclick="showTab(4)">📊 Progreso</button>
+    </nav>
+
+    <div id="tab0" class="tab active">
+        <div class="card">
+            <h2>¡Hola Geraldo Meneses!</h2>
+            <p>Edad: 40 | 1.77m | ~77kg | Meta: Ganar masa + quemar grasa + definir</p>
+            <button onclick="startWorkout()">🚀 Entrenamiento de Hoy (PPL)</button>
+        </div>
+        <div id="today-plan" class="card"></div>
+    </div>
+
+    <div id="tab1" class="tab"><div id="routines-content" class="card"></div></div>
+    <div id="tab2" class="tab"><div id="diet-content" class="card"></div></div>
+    <div id="tab3" class="tab"><div id="supp-content" class="card"></div></div>
+    <div id="tab4" class="tab"><div id="progress-content" class="card"></div></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
