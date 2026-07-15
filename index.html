@@ -3,36 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geraldo Fit - Transformación 40+</title>
+    <title>Geraldo Fit</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; margin:0; background:#0a0a0a; color:#fff; }
-        header { background: linear-gradient(90deg, #ff4081, #3f51b5); padding:1.5rem; text-align:center; border-radius:0 0 24px 24px; }
-        nav { display:flex; flex-wrap:wrap; justify-content:space-around; background:#16213e; padding:0.8rem; position:sticky; top:0; z-index:10; gap:5px; }
-        .tab { display:none; padding:1rem; }
-        .tab.active { display:block; }
-        button { background:linear-gradient(90deg,#ff4081,#ff80ab); color:white; border:none; padding:12px 20px; margin:6px; border-radius:12px; font-weight:600; cursor:pointer; }
-        .card { background:#16213e; margin:12px 0; padding:18px; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
-        .exercise { background:#0f3460; padding:16px; border-radius:12px; margin:10px 0; }
-        img { width:100%; border-radius:12px; margin:8px 0; }
-        .done { text-decoration: line-through; color: #4ade80; }
+        header { 
+            background: linear-gradient(135deg, #ff4081, #3f51b5); 
+            padding: 2rem 1rem; text-align:center; 
+            border-radius: 0 0 30px 30px;
+        }
+        header h1 { font-size: 2.2em; margin: 0; }
+        nav { 
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px; 
+            background: #16213e; padding: 20px; 
+        }
+        button { 
+            background: linear-gradient(90deg, #ff4081, #ff80ab); 
+            color: white; border: none; padding: 18px; 
+            border-radius: 16px; font-size: 1.1em; font-weight: 600; 
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .tab { display: none; padding: 20px; }
+        .tab.active { display: block; }
+        .card { background: #16213e; padding: 20px; border-radius: 20px; margin-bottom: 20px; }
+        img { width: 100%; border-radius: 16px; }
     </style>
 </head>
 <body>
-    <header><h1>🏋️‍♂️ Geraldo Fit</h1><p>40+ • Masa + Definición • Jeft Style</p></header>
+    <header>
+        <h1>🏋️‍♂️ Geraldo Fit</h1>
+        <p>40+ • Masa + Definición • Jeft Style</p>
+    </header>
+
     <nav>
         <button onclick="showTab(0)">🏠 Inicio</button>
-        <button onclick="showTab(1)">📅 Rutinas Detalladas</button>
+        <button onclick="showTab(1)">📅 Rutinas</button>
         <button onclick="showTab(2)">🍲 Dieta</button>
-        <button onclick="showTab(3)">💪 Tracker Progreso</button>
+        <button onclick="showTab(3)">💪 Tracker</button>
         <button onclick="showTab(4)">💊 Suplementos</button>
     </nav>
 
-    <div id="tab0" class="tab active"> ... (bienvenida) </div>
-    <div id="tab1" class="tab"><div id="routines-content"></div></div>
-    <div id="tab2" class="tab"><div id="diet-content"></div></div>
-    <div id="tab3" class="tab"><div id="tracker-content"></div></div>
-    <div id="tab4" class="tab"><div id="supp-content"></div></div>
+    <div id="tab0" class="tab active">
+        <div class="card">
+            <h2>¡Bienvenido Geraldo!</h2>
+            <p>Estás en camino a tu mejor versión a los 40. Sé consistente.</p>
+            <button onclick="showTab(1)">Ver Rutina de Hoy</button>
+        </div>
+    </div>
+
+    <div id="tab1" class="tab"><div id="routines-content" class="card"></div></div>
+    <div id="tab2" class="tab"><div id="diet-content" class="card"></div></div>
+    <div id="tab3" class="tab"><div id="tracker-content" class="card"></div></div>
+    <div id="tab4" class="tab"><div id="supp-content" class="card"></div></div>
 
     <script src="app.js"></script>
 </body>
