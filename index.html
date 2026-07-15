@@ -14,36 +14,25 @@
         button { background:linear-gradient(90deg,#ff4081,#ff80ab); color:white; border:none; padding:12px 20px; margin:6px; border-radius:12px; font-weight:600; cursor:pointer; }
         .card { background:#16213e; margin:12px 0; padding:18px; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
         .exercise { background:#0f3460; padding:16px; border-radius:12px; margin:10px 0; }
-        h2, h3 { color:#ff80ab; }
+        img { width:100%; border-radius:12px; margin:8px 0; }
+        .done { text-decoration: line-through; color: #4ade80; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🏋️‍♂️ Geraldo Fit</h1>
-        <p>40+ • Masa Muscular • Definición • Jeft Style</p>
-    </header>
-
+    <header><h1>🏋️‍♂️ Geraldo Fit</h1><p>40+ • Masa + Definición • Jeft Style</p></header>
     <nav>
         <button onclick="showTab(0)">🏠 Inicio</button>
-        <button onclick="showTab(1)">📅 Rutinas 3 Meses</button>
-        <button onclick="showTab(2)">🍲 Dieta VE</button>
-        <button onclick="showTab(3)">💊 Suplementos</button>
-        <button onclick="showTab(4)">📊 Progreso</button>
+        <button onclick="showTab(1)">📅 Rutinas Detalladas</button>
+        <button onclick="showTab(2)">🍲 Dieta</button>
+        <button onclick="showTab(3)">💪 Tracker Progreso</button>
+        <button onclick="showTab(4)">💊 Suplementos</button>
     </nav>
 
-    <div id="tab0" class="tab active">
-        <div class="card">
-            <h2>¡Hola Geraldo Meneses!</h2>
-            <p>Edad: 40 | 1.77m | ~77kg | Meta: Ganar masa + quemar grasa + definir</p>
-            <button onclick="startWorkout()">🚀 Entrenamiento de Hoy (PPL)</button>
-        </div>
-        <div id="today-plan" class="card"></div>
-    </div>
-
-    <div id="tab1" class="tab"><div id="routines-content" class="card"></div></div>
-    <div id="tab2" class="tab"><div id="diet-content" class="card"></div></div>
-    <div id="tab3" class="tab"><div id="supp-content" class="card"></div></div>
-    <div id="tab4" class="tab"><div id="progress-content" class="card"></div></div>
+    <div id="tab0" class="tab active"> ... (bienvenida) </div>
+    <div id="tab1" class="tab"><div id="routines-content"></div></div>
+    <div id="tab2" class="tab"><div id="diet-content"></div></div>
+    <div id="tab3" class="tab"><div id="tracker-content"></div></div>
+    <div id="tab4" class="tab"><div id="supp-content"></div></div>
 
     <script src="app.js"></script>
 </body>
